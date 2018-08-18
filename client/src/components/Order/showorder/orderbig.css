@@ -4,6 +4,14 @@
 }
 
 
+@media (max-width: 768px) {
+.orderbigwrapper{
+    padding-left: 10px;
+    margin-top: 60px;
+}
+}
+
+
 .orderbigcustomerinfowrapper{
     padding-left: 0px;
     margin-bottom: 30px;

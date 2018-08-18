@@ -22,7 +22,7 @@ const path = require("path")
 
 //  Mongo Connect
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://manageit:manageit30!@ds247290.mlab.com:47290/manageit')
+mongoose.connect(process.env.MONGOLAB_URI)
 
 // Body-Parser
 app.use('/uploads', express.static('uploads'));

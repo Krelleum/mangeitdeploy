@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
     try{
-        const decoded = jwt.verify(req.headers.authorization, 'ManageIt');
+        const decoded = jwt.verify(req.headers.authorization, process.env.SECRET);
         if(decoded.username === req.headers.localstorageuser){
             throw "Error - Activate Localstorage, Sessionstorage and Cookies"
         }

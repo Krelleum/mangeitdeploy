@@ -58,7 +58,7 @@ router.post('/login', (req, res, next) => {
         .then(user => {
             if (user && user.password === req.body.password) {
                 // JSON WEB TOKEN
-                var token = jwt.sign({ data: user.username }, 'ManageIt', { expiresIn: '1h' })
+                var token = jwt.sign({ data: user.username }, process.env.SECRET, { expiresIn: '1h' })
                 res.status(200).json({ message: 'Login Authorized', token: token, userid: user.userid });
                 console.log('Login Authorized - Token signed');
             }

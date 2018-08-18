@@ -2,6 +2,13 @@
     padding-left: 70px;
 }
 
+@media (max-width: 768px) {
+.showcustomercontainer{
+    padding-left: 0px;
+    margin-top: 60px;
+}
+}
+
 .showcustomersmall{
     padding-top: 5px;
     padding-bottom: 5px;
@@ -30,3 +37,12 @@
     padding-left: 5px;
 }
 
+
+.showcustomerinfoleft{
+    padding-left: 0px;
+}
+
+
+.showcustomerinfo{
+    padding-left: 5px;
+}

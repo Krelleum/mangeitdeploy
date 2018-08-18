@@ -59,12 +59,10 @@ componentDidMount(){
                 <OpenOrderCard/>
                 <CustomerCard/>
                  
-            </div>
-            <div className='row row2'>
-                    <HighPriorityCard />
-                    <MessageCard/> 
-                    <CreateTimeStampCard/>
-                    <StatsCard/>
+                <HighPriorityCard />
+                <MessageCard/> 
+                <CreateTimeStampCard/>
+                <StatsCard/>
             </div>
 
           

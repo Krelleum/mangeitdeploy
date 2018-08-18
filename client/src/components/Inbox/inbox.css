@@ -2,6 +2,13 @@
     padding-left: 70px;
 }
 
+@media (max-width: 768px) {
+.inboxcontainer{
+    padding-left: 10px;
+    margin-top: 60px;
+}
+}
+
 .searchcontact input {
     background: none;
     border: 2px solid transparent;

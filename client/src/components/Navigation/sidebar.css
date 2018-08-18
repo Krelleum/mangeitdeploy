@@ -199,6 +199,7 @@ a.article:hover {
     max-height: 50px;
     padding-bottom: 5px !important;
     width: 10%;
+    min-width: 60px;
     float: left;
   }
 

@@ -1,0 +1,12 @@
+
+.orderscontainer{
+    padding-left: 70px;
+}
+
+
+
+@media (max-width: 768px) {
+.orderscontainer{
+    padding-left: 10px;
+}
+}

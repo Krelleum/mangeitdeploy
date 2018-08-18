@@ -1,0 +1,63 @@
+.inboxcontainer{
+    padding-left: 70px;
+}
+
+.searchcontact input {
+    background: none;
+    border: 2px solid transparent;
+    border-image: var(--backgroundhover);
+    border-image-slice: 1;
+}
+
+.searchcontact input:focus {
+    outline: none;
+}
+
+
+.founduser p {
+    background: var(--backgroundhover);
+    max-width: 250px;
+    color: white;
+    padding: 5px;
+}
+
+
+.writemessagewrapper{
+    padding: 0px;
+}
+
+.writemessagefield {
+    background: none;
+    border: 2px solid transparent;
+    border-image: var(--backgroundhover);
+    border-image-slice: 1;
+    min-width: 100%;
+    min-height: 300px;
+}
+
+
+.writemessagefield:focus {
+    outline: none;
+}
+
+
+.showmessagesmall{
+    background: var(--darkgreybackground);
+    max-width:70%;
+    max-height: 120px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.showmessagesmall::-webkit-scrollbar{
+    display: none;
+}
+
+.showmessagesmall:hover{
+    background: var(--backgroundhover);
+}
+
+.showmessagesmallsender{
+    color: grey;
+}

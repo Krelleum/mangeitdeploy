@@ -1,0 +1,71 @@
+.container{
+    background-color: transparent !important;
+}
+
+
+.logincontainerwrapper{
+    
+    
+    margin-top: 200px;
+    padding: 0px;
+}
+
+.logincontainerheader{
+    background: var(--backgroundhover);
+}
+
+.logincontainerheader h2{
+    margin:0px;
+    padding: 10px;
+}
+
+.logincontainersignupbtn{
+    margin-top: 0px;
+    background: var(--darkgreybackground);
+    color: white;
+}
+
+.logincontainersignupbtn p {
+    margin-bottom: 0px;
+}
+
+.logincontainerloginbtn{
+    
+    background: var(--backgroundhover);
+}
+.logincontainerloginbtn p{
+    margin-bottom: 0px;
+}
+
+.loginsignupwrapper{
+    background: white;
+    height: auto;
+}
+
+.signupwrapper{
+    background: white;
+    padding-bottom: 50px;
+}
+
+.loginwrapper{
+    background: var(--darkgreybackground);
+    padding-bottom: 50px;
+}
+
+
+.signupform input{
+    color: white;
+    background: none;
+}
+
+.loginform input{
+    color: white;
+    background: none;
+    border-bottom: 1px solid transparent;
+    border-image: var(--backgroundhover);
+    border-image-slice: 1;
+}
+
+#loginbutton{
+    border: none;
+}

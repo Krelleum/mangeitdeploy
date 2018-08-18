@@ -1,0 +1,54 @@
+.errorwrapper{
+    padding: 10px;
+    height: auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.erroricon{
+    font-size: 4rem;
+    color: red;
+    margin-top: 10px;
+    float: right;
+}
+
+
+
+.errormessage{
+    float: left;
+    color: black;
+    width: 80%;
+}
+
+.errormessage p {
+    margin: 0px;
+    font-size: 1.3rem;
+}
+
+
+
+.successwrapper{
+    padding: 10px;
+    height: auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.successicon{
+    font-size: 4rem;
+    color: green;
+    margin-top: 10px;
+    float: right;
+}
+
+.success p {
+    font-size: 1.3rem;
+    color: green;
+    font-weight: 600;
+}
+
+.successmessage{
+    float: left;
+    color: black;
+    width: 80%;
+}

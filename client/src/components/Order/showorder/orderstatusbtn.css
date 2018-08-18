@@ -1,0 +1,24 @@
+.orderclosebtn{
+    color: grey;
+    float: right;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.orderclosebtn p{
+    margin-bottom: 0px;
+}
+
+
+.orderreopenbtn{
+    margin-bottom: 0px;
+}
+.orderreopenbtn{
+    color: grey;
+    
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}

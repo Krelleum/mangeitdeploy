@@ -1,0 +1,32 @@
+.showcustomercontainer{
+    padding-left: 70px;
+}
+
+.showcustomersmall{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: none;
+    transition: all 200ms; 
+    
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    opacity: 0.5;
+}
+
+.showcustomersmall:hover{
+    background: var(--backgroundhover);
+    color: white;
+    opacity: 1;
+}
+
+
+.showcustomerinfo label{
+    border-bottom: 2px solid transparent;
+    border-image: var(--backgroundhover);
+    border-image-slice: 1;
+}
+.showcustomerinfoheader{
+    font-size: 2rem;
+    background: var(--backgroundhover);
+    padding-left: 5px;
+}
+

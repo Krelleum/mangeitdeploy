@@ -57,3 +57,41 @@
 .showclosedorderwrapper::-webkit-scrollbar { 
     display: none; 
 }
+
+
+@media (max-width: 768px) {
+  .showopenorderwrapper{
+      overflow: visible;
+      min-height: none;
+      max-height: none;
+  }
+
+  .showopenorderwrapper:hover{
+      overflow: visible;
+      min-height: none;
+      max-height: none;
+  }
+
+  .openorderscontainerwrapper{
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+
+  .showclosedorderwrapper{
+      overflow: visible;
+      max-height: none;
+      min-height: none;
+  }
+
+  .showclosedorderwrapper:hover{
+      overflow: visible;
+      max-height: none;
+      min-height: none;
+  }
+
+   .closedorderscontainerwrapper{
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+
+  }

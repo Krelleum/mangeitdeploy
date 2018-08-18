@@ -44,7 +44,7 @@ class WriteMessage extends Component{
 
             axios({
                 method: 'patch',
-                url: 'http://localhost:5000/inbox/sendmessage',
+                url: '/inbox/sendmessage',
                 data: body,
                 header: {
                     'Content-Type': 'application/json',

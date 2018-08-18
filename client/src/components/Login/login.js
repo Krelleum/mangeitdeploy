@@ -39,7 +39,7 @@ class LogIn extends Component {
 
         axios({
             method: 'post',
-            url: 'http://localhost:5000/user/login',
+            url: '/user/login',
             data: body,
             header: { 'Content-Type': 'application/json' }
         })

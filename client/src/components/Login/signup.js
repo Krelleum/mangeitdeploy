@@ -45,7 +45,7 @@ class SignUp extends Component {
 
         axios({
             method: 'post',
-            url: 'http://localhost:5000/user/signup',
+            url: '/user/signup',
             data: body,
             header: { 'Content-Type': 'application/json' }
         })
@@ -87,7 +87,7 @@ class SignUp extends Component {
        
         axios({
             method: 'post',
-            url: 'http://localhost:5000/inbox/createinbox',
+            url: '/inbox/createinbox',
             data: inboxBody,
             header: { 'Content-Type': 'application/json' }
         })
@@ -114,7 +114,7 @@ class SignUp extends Component {
         
         axios({
             method: 'patch',
-            url: 'http://localhost:5000/user/patchuserinboxid',
+            url: '/user/patchuserinboxid',
             data: patchInboxId,
             header: { 'Content-Type': 'application/json' }
         })

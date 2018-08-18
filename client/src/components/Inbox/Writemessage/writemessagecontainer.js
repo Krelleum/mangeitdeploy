@@ -32,7 +32,7 @@ getInboxId(username){
 
     axios({
         method: 'get',
-        url: 'http://localhost:5000/user/getuserbyname/' + username,
+        url: '/user/getuserbyname/' + username,
         header: {
             'Content-Type': 'application/json',
             'Authorization': localStorage.getItem('tkey'),

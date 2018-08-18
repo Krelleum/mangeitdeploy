@@ -18,7 +18,7 @@ class ShowCustomer extends Component {
     componentDidMount() {
         axios({
             method: 'get',
-            url: 'http://localhost:5000/customer/getallcustomer/',
+            url: '/customer/getallcustomer/',
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey'),

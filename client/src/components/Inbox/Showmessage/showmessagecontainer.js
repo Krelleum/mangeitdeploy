@@ -21,7 +21,7 @@ class ShowMessageContainer extends Component {
 
         axios({
             method: 'get',
-            url: 'http://localhost:5000/inbox/getallmessages/' + userid,
+            url: '/inbox/getallmessages/' + userid,
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey'),

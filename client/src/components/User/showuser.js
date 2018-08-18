@@ -19,7 +19,7 @@ class ShowUser extends Component {
 componentDidMount(){
     axios({
         method: 'get',
-        url: 'http://localhost:5000/user/getallusers/',
+        url: '/user/getallusers/',
         header: {
             'Content-Type': 'application/json',
             'Authorization': localStorage.getItem('tkey'),

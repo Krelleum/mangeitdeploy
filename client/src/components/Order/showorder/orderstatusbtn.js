@@ -55,7 +55,7 @@ class OrderStatusBtn extends Component {
         
         axios({
             method: 'patch',
-            url: 'http://localhost:5000/order/changeorderstatus',
+            url: '/order/changeorderstatus',
             data: body,
             header: {
                 'Content-Type': 'application/json',

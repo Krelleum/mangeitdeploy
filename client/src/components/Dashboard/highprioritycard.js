@@ -25,7 +25,7 @@ class HighPriorityCard extends Component {
     componentWillMount() {
         axios({
             method: 'get',
-            url: 'http://localhost:5000/order/getopenorders',
+            url: '/order/getopenorders',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey')

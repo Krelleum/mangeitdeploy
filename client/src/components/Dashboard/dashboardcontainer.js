@@ -30,7 +30,7 @@ componentDidMount(){
     
     axios({
         method: 'get',
-        url: 'http://localhost:5000/user/getuserdata/' + userid,
+        url: '/user/getuserdata/' + userid,
         header: {
             'Content-Type' : 'application/json',
             'Authorization': localStorage.getItem('tkey'),

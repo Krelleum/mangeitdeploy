@@ -14,12 +14,18 @@ const commentRoute = require('./api/routes/commentroutes');
 const timestampRoute = require('./api/routes/timestamproute');
 
 
+
+// Path from Mern Heroku Deploy Tutorial
+//
+//
+const path = require("path")
+
 //  Mongo Connect
 
-mongoose.connect('mongodb://manageit:manageit30!@ds247290.mlab.com:47290/manageit')
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://manageit:manageit30!@ds247290.mlab.com:47290/manageit')
 
 // Body-Parser
-
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json());
 
@@ -46,15 +52,29 @@ app.use('/customer', customerRoute);
 app.use('/comment', commentRoute);
 app.use('/timestamp', timestampRoute)
 
+//  404 and 500 Handler
+app.use((req, res, next) => {
+    const error = new Error('not found');
+    error.status = 404;
+
+    next(error);
+})
 
 
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        }
+    })
+})
 
 
-// Test response Middleware
-
-
-
-// Middleware
+// For Deployment
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 
 module.exports = app;

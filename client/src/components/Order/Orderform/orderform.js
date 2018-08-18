@@ -45,7 +45,7 @@ class OrderForm extends Component {
 
         axios({
             method: 'get',
-            url: 'http://localhost:5000/customer/searchcustomer/' + customerToFind,
+            url: '/customer/searchcustomer/' + customerToFind,
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey'),
@@ -110,7 +110,7 @@ class OrderForm extends Component {
 
         axios({
             method: 'post',
-            url: 'http://localhost:5000/customer/createcustomer',
+            url: '/customer/createcustomer',
             data: body,
             header: {
                 'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ class OrderForm extends Component {
         }
         axios({
             method: 'post',
-            url: 'http://localhost:5000/order/createorder',
+            url: '/order/createorder',
             data: body,
             header: {
                 'Content-Type': 'application/json',
@@ -169,7 +169,7 @@ class OrderForm extends Component {
 
                     axios({
                         method: 'patch',
-                        url: 'http://localhost:5000/customer/addorder',
+                        url: '/customer/addorder',
                         data: newBody,
                         header: {
                             'Content-Type': 'application/json',
@@ -188,7 +188,7 @@ class OrderForm extends Component {
                     
                     axios({
                         method: 'patch',
-                        url: 'http://localhost:5000/user/createdorders',
+                        url: '/user/createdorders',
                         data: newBody,
                         header: {
                             'Content-Type': 'application/json',

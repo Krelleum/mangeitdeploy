@@ -26,7 +26,7 @@ getLoginState(){
 
   axios({
     method: 'post',
-    url: 'http://localhost:5000/user/verify',
+    url: '/user/verify',
     headers:
       {
         'Content-Type': 'application/json',

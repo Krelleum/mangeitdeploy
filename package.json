@@ -6,10 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Kevin Müller",
   "license": "ISC",
+
+  "engines": {
+    "node": "8.9.4"
+  },
+
+
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^3.5.1",

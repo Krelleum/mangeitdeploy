@@ -16,7 +16,7 @@ class OrderCommentContainer extends Component{
     componentDidMount(){
         axios({
             method: 'get',
-            url: 'http://localhost:5000/comment/getcommentbyorderid/' + this.props.orderid,
+            url: '/comment/getcommentbyorderid/' + this.props.orderid,
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey')

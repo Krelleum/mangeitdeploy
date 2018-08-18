@@ -21,7 +21,7 @@ class StatsCard extends Component {
 
         axios({
             method: 'get',
-            url: 'http://localhost:5000/timestamp/gettimestamp',
+            url: '/timestamp/gettimestamp',
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey'),

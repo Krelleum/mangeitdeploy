@@ -15,7 +15,7 @@ class ShowUserInfo extends Component {
 componentDidUpdate(){
     axios({
         method: 'get',
-        url: 'http://localhost:5000/user/getuserdata/' + this.props.userid,
+        url: '0/user/getuserdata/' + this.props.userid,
         header: {
             'Content-Type': 'application/json',
             'Authorization': localStorage.getItem('tkey'),
@@ -35,7 +35,7 @@ componentDidUpdate(){
 componentWillReceiveProps(){
     axios({
         method: 'get',
-        url: 'http://localhost:5000/user/getuserdata/' + this.props.userid,
+        url: '/user/getuserdata/' + this.props.userid,
         header: {
             'Content-Type': 'application/json',
             'Authorization': localStorage.getItem('tkey'),

@@ -17,7 +17,7 @@ class ShowUserInfo extends Component {
     componentDidMount() {
         axios({
             method: 'get',
-            url: 'http://localhost:5000/customer/findcustomerid/' + this.props.customerid,
+            url: '/customer/findcustomerid/' + this.props.customerid,
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey'),
@@ -37,7 +37,7 @@ class ShowUserInfo extends Component {
     componentDidUpdate() {
         axios({
             method: 'get',
-            url: 'http://localhost:5000/customer/findcustomerid/' + this.props.customerid,
+            url: '/customer/findcustomerid/' + this.props.customerid,
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey'),

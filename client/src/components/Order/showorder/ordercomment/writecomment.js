@@ -35,7 +35,7 @@ class WriteComment extends Component {
 
             axios({
                 method: 'post',
-                url: 'http://localhost:5000/comment/createcomment',
+                url: '/comment/createcomment',
                 data: body,
                 header: {
                     'Content-Type': 'application/json',

@@ -16,7 +16,7 @@ class ShowOpenOrders extends Component{
     componentDidMount(){
         axios({
             method: 'get',
-            url: 'http://localhost:5000/order/getopenorders',
+            url: '/order/getopenorders',
             header: {
                 'Content-Type':'application/json',
                 'Authorization': localStorage.getItem('tkey'),

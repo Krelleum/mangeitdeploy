@@ -28,7 +28,7 @@ class OrderBig extends Component {
     componentDidMount() {
         axios({
             method: 'get',
-            url: 'http://localhost:5000/order/getorderbyid/' + this.props.match.params.orderid,
+            url: '/order/getorderbyid/' + this.props.match.params.orderid,
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey')
@@ -44,7 +44,7 @@ class OrderBig extends Component {
     getCustomerInfo() {
         axios({
             method: 'get',
-            url: 'http://localhost:5000/customer/searchcustomer/' + this.state.data.customername,
+            url: '/customer/searchcustomer/' + this.state.data.customername,
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey')
@@ -102,7 +102,7 @@ class OrderBig extends Component {
         // delete the comments
         axios({
             method: 'delete',
-            url: 'http://localhost:5000/comment/deleteallcomments/' + orderId,
+            url: '/comment/deleteallcomments/' + orderId,
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey')
@@ -116,7 +116,7 @@ class OrderBig extends Component {
 
                     axios({
                         method: 'delete',
-                        url: 'http://localhost:5000/order/deleteorder/' + orderId,
+                        url: '/order/deleteorder/' + orderId,
                         header: {
                             'Content-Type': 'application/json',
                             'Authorization': localStorage.getItem('tkey')

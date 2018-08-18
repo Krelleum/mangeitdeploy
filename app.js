@@ -42,7 +42,8 @@ app.use((req, res, next) => {
     next();
 });
 
-
+// from Mern Heroku Deploy Tutorial
+app.use(express.static(path.join(__dirname, "client", "build")))
 // Routing
 
 app.use('/user', userRoute);

@@ -38,7 +38,7 @@ router.post('/createcustomer', (req, res, next) => {
                     })
                     .catch(err => {
                         res.status(500).json(err);
-                        console.log('Customer not')
+                        console.log('Unable to create Customer')
                     })
 
             }
@@ -117,32 +117,32 @@ router.get('/getallcustomer', (req, res, next) => {
 // Search Customer
 
 router.get('/searchcustomer/:customername', (req, res, next) => {
-    
+
     var customername = req.params.customername;
     console.log(customername);
-    Customer.findOne({name: customername})
-    
-    .then(result => {
-        console.log('found Customer');
-        if(result === null){
-            
-            res.status(404).json(result);
-        }
-        else{
-            res.status(200).json(result);
-        }
-        
-    })
-    .catch(err => {
-        res.status(404).json(err);
-    })
+    Customer.findOne({ name: customername })
+
+        .then(result => {
+            console.log('found Customer');
+            if (result === null) {
+
+                res.status(404).json(result);
+            }
+            else {
+                res.status(200).json(result);
+            }
+
+        })
+        .catch(err => {
+            res.status(404).json(err);
+        })
 });
 
 
 // Find Customer by ID
 
 router.get('/findcustomerid/:customerid', (req, res, next) => {
-    Customer.findOne({ customerid: req.params.customerid})
+    Customer.findOne({ customerid: req.params.customerid })
         .then(result => {
             res.status(200).json(result)
             console.log('Found Customer')

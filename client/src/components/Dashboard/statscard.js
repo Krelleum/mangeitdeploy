@@ -12,6 +12,7 @@ class StatsCard extends Component {
         super(props);
         this.state = {
            sum: 0
+           
         }
     }
 
@@ -21,13 +22,15 @@ class StatsCard extends Component {
 
         axios({
             method: 'get',
-            url: '/timestamp/gettimestamp',
+            url: 'http://localhost:5000/timestamp/gettimestamp',
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey'),
             }
         })
             .then(response => {
+                
+                
                 this.calculateSum(response.data)
                 this.setState({
                     data: response.data
@@ -58,7 +61,7 @@ getShift() {
     var day = date.getDay();
     var weekday = new Array(7);
 
-    weekday[1] = 'mon';
+    weekday[1] = 'mo';
     weekday[2] = 'tue';
     weekday[3] = 'wed';
     weekday[4] = 'thur';
@@ -102,7 +105,7 @@ getShift() {
     
  calculateSum(data){
     
-    
+   
 
     var shifts = [
         data.mofirst,
@@ -146,10 +149,10 @@ calculateScore(data){
     
     var sum = this.state.sum;
     var shift = this.getShift();
-    
+    console.log(data)
     var shiftsum = data[shift];
     
-
+    
 
     var average = sum / 15;
 
@@ -158,9 +161,17 @@ calculateScore(data){
     var endscore = score - 100
 
     
-    this.setState({
-        score: Math.floor(endscore) + '%'
-    })
+       
+            this.setState({
+                score: Math.floor(endscore) + '%'
+            })
+   
+    
+      
+    
+
+    
+   
    
 
 
@@ -171,10 +182,16 @@ calculateScore(data){
 
     render() {
         return (
-            <div className='col-md-2 statscard'>
-                <p>Pred. Workloadlevel</p>
+            <div className='col-md-2 statscard dashcard'>
+                <div className='cardfield'>
+                    <h2>{this.state.score}</h2>
+                </div>
+                <div className='cardtext'>
+                    <h3>Workload</h3>
+                    <p>Displays the predicted workload for your shift.</p>
+                </div>
                 <i className="material-icons" id='statscardicon' >trending_up</i>
-                <h2>{this.state.score}</h2>
+                
             </div>
         )
     }

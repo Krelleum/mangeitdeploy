@@ -6,19 +6,19 @@
 #dashboardusericon{
     position: absolute;
     font-size: 250px;
-    color: rgba(255,255,255,0.1);
-    left: 30%;
+    color:darkgray;
+    opacity: 0.1;
+    left: 60%;
 }
 
 @media (max-width: 768px) {
 .dashboardcontainer{
     padding-left: 10px;
-    margin-top: 60px;
 }
 }
 
 .dashboarduserwrapper{
-    background: grey;
+    background: white;
     padding-top: 20px;
     min-height: 200px;
     transition: all 200ms linear; 
@@ -37,6 +37,7 @@
     font-size: 2.5rem;
     margin-top: 0px;
     margin-bottom: 0px;
+    color: var(--mainfont);
 }
 
 .dashboarduserheading h2{
@@ -44,14 +45,26 @@
     font-size: 2.5rem;
     margin-top: 0px;
     margin-bottom: 0px;
+    color: var(--mainfont);
+}
+
+.cardheader{
+    text-align: left;
+    /* border-bottom: 2px solid transparent;
+    border-image: var(--backgroundhover);
+    border-image-slice: 1; */
+    background: var(--backgroundhover);
+    color: white;
+    box-shadow: var(--shadow);
 }
 
 .openordercard{
-    background: var(--darkgreybackground);
+    background: white;
     min-height: 200px;
     text-align: center;
     color: grey;
-    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
     transition: all 200ms linear;
     overflow: hidden;
 }
@@ -69,11 +82,7 @@
     color: white;
 }
 
-#openordercardicon {
-    font-size:250px;
-    position: absolute;
-    color: rgba(255,255,255,0.1);
-}
+
 
 
 .highprioritycard{
@@ -97,21 +106,14 @@
     font-size: 6rem;
 }
 
-#highprioritycardicon{
-    font-size:250px;
-    position: absolute;
-    
-    
-    color: rgba(255,255,255,0.1);
-}
+
 
 .messagecard{
     background: var(--greybackground);
     min-height: 200px;
-    max-height: 200px;
-    overflow: hidden;
-    padding: 0px;
-    padding-top: 50px;
+    
+    padding-top: 20px;
+    color: grey;
     text-align: center;
     transition: all 200ms linear;
     overflow: hidden;
@@ -124,60 +126,33 @@
     z-index: 99;
 }
 
-.messagecard img {
-    
-    
-    top:0;
-    left:0;
-    opacity: 0.1;
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-   
-    
 
-}
 
-.messagecard p{
-    color: grey;
-    display: inline;
-    margin-right: 10px;
-    margin-left: 10px; 
-}
 
 .messagecard h2{
-     color: white;
+    color: white;
     font-size: 6rem;
-    display: inline;
+    
+   
 }
 
-#messagecardicon{
-    position: absolute;
-    font-size: 250px;
-    color: rgba(255,255,255,0.1);
-    
-}
+
 
 
 
 .customercard{
-    background: var(--greybackground);
+    background: var(--darkgreybackground);
     min-height: 200px;
     text-align: center;
     color: grey;
-    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
     transition: all 200ms linear;
     overflow: hidden;
 }
 
 
-.customercard:hover{
-    background: var(--backgroundhover);
-    transform: scale(1.05);
-    z-index: 99;
-    
-}
+
 
 .customercard h2{
     font-size: 6rem;
@@ -212,9 +187,7 @@
     text-align: center;
     color: grey;
     padding-top: 20px;
-    transition: all 200ms linear;
-    overflow: hidden;
-    z-index: 1;
+   
 }
 
 .statscard:hover{
@@ -234,10 +207,83 @@
 
 
 
-#statscardicon{
-    position: absolute;
-    font-size: 250px;
-    color: rgba(255,255,255,0.1);
-    left: 80px;
-    bottom: -90px;
+
+
+
+.dashcard{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    
+    transition: all 200ms linear;
+    overflow: hidden;
+    z-index: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    background: white;
+    
 }
+
+.dashcard:hover{
+    background: var(--backgroundhover);
+    transform: scale(1.05);
+    z-index: 99;
+    color: white;
+    
+}
+
+.dashcard:hover > .cardfield{
+    box-shadow:none;
+    background: transparent;
+}
+
+.dashcard:hover i {
+    color: white;
+    opacity: 0.2;
+}
+.dashcard h3{
+    color: black;
+    text-align: left;
+    margin-bottom: 2px;
+    font-size: 1.6rem;
+    
+}
+
+.dashcard:hover h3{
+    color: white;
+}
+
+.dashcard p{
+    text-align: left;
+    line-height: 120%;
+    font-size: 1.4rem;
+}
+
+.dashcard i{
+    position: absolute;
+    font-size: 290px;
+    color: darkgray;
+    left: 90px;
+    bottom: -30px;
+    
+    opacity: 0.1;
+    
+
+
+}
+
+
+.cardfield{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    background: var(--backgroundhover);
+    width: 60%;
+    min-height: 70px;
+    color: white;
+    
+    /* box-shadow: var(--shadow); */
+}
+

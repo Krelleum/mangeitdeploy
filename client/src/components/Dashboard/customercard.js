@@ -20,7 +20,7 @@ class CustomerCard extends Component {
     componentWillMount() {
         axios({
             method: 'get',
-            url: '/customer/getallcustomer',
+            url: 'http://localhost:5000/customer/getallcustomer',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey')
@@ -47,11 +47,19 @@ class CustomerCard extends Component {
 
     render() {
         return (
-            <div className='col-md-3 customercard' onClick={this.redirectCustomer.bind(this)}>
+            <div className='col-md-2 customercard dashcard' onClick={this.redirectCustomer.bind(this)}>
+                <div className='cardfield'>
+                    <h2>{this.state.data.length}</h2>
+                </div>
+                
+               
+                <div className='cardtext'>
+                    <h3>Customers</h3>
+                    <p>Shows all active Customers in your Database.</p>
+                </div>
                 <i className="material-icons" id='openordercardicon' >people</i>
-                <p>There are</p>
-                <h2>{this.state.data.length}</h2>
-                <p>active Customers</p>
+                
+                
             </div>
         )
     }

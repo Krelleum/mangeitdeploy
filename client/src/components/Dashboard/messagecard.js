@@ -27,7 +27,7 @@ class MessageCard extends Component {
         
         axios({
             method: 'get',
-            url: '/inbox/getallmessages/' + userid,
+            url: 'http://localhost:5000/inbox/getallmessages/' + userid,
             header: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey'),
@@ -60,11 +60,16 @@ class MessageCard extends Component {
        
        
         return (
-            <div className='col-md-3 messagecard' onClick={this.redirectInbox.bind(this)}>
+            <div className='col-md-2 messagecard dashcard' onClick={this.redirectInbox.bind(this)}>
+                <div className='cardfield'>
+                    <h2>{this.state.data.messages && this.state.data.messages.length}</h2>
+                </div>
                 <i className="material-icons" id='messagecardicon'>mail</i>
-                <p>You've got</p>
-                <h2>{this.state.data.messages && this.state.data.messages.length}</h2>
-                <p>Messages</p>
+                <div className='cardtext'>
+                    <h3>Messages</h3>
+                    <p>Displays all messages your coworkers sent you.</p>
+                </div>
+                
                 
             </div>
         )

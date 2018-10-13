@@ -22,7 +22,7 @@ class OpenOrderCard extends Component{
     componentWillMount(){
         axios({
             method: 'get',
-            url:'/order/getopenorders',
+            url:'http://localhost:5000/order/getopenorders',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey')
@@ -47,11 +47,17 @@ class OpenOrderCard extends Component{
 
     render(){
         return(
-            <div className='col-md-2 openordercard' onClick={this.redirectOrder.bind(this)}>
+            <div className='col-md-2 openordercard dashcard' onClick={this.redirectOrder.bind(this)}>
+                <div className='cardfield'>
+                    <h2>{this.state.data.length}</h2>
+                </div>
                 <i className="material-icons" id='openordercardicon' >assignment</i>
-                <p>You have got</p>
-                <h2>{this.state.data.length}</h2>
-                <p>Open Orders</p>
+                <div className='cardtext'>
+                    <h3>Open Orders</h3>
+                    <p>Displays all orders that need your Attention.</p>
+                </div>
+                
+                
             </div>
         )
     }

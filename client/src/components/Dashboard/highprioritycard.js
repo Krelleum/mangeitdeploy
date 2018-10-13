@@ -25,7 +25,7 @@ class HighPriorityCard extends Component {
     componentWillMount() {
         axios({
             method: 'get',
-            url: '/order/getopenorders',
+            url: 'http://localhost:5000/order/getopenorders',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey')
@@ -66,11 +66,15 @@ class HighPriorityCard extends Component {
 
     render() {
         return (
-            <div className='col-md-2 highprioritycard' onClick={this.redirectOrder.bind(this)}>
+            <div className='col-md-2 highprioritycard dashcard' onClick={this.redirectOrder.bind(this)}>
+                <div className='cardfield'>
+                    <h2>{this.filterPriority()}</h2>
+                </div>
                 <i className="material-icons" id='highprioritycardicon'>warning</i>
-                <p>You have got</p>
-                <h2>{this.filterPriority()}</h2>
-                <p>High Priority Orders</p>
+                <div className='cardtext'>
+                    <h3>High Priority</h3>
+                    <p>Shows all urgent Orders.</p>
+                </div>
             </div>
         )
     }

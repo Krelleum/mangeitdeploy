@@ -30,7 +30,7 @@ componentDidMount(){
         if(this.state.shift !== 'init'){
             axios({
                 method: 'patch',
-                url: '/timestamp/patchtimestamp/' + this.state.shift,
+                url: 'http://localhost:5000/timestamp/patchtimestamp/' + this.state.shift,
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': localStorage.getItem('tkey')
@@ -58,10 +58,16 @@ componentDidMount(){
 
     render() {
         return (
-            <div className='col-md-2 createtimestampcard' onClick={this.patchTimeStamp.bind(this)}>
+            <div className='col-md-2 createtimestampcard dashcard' onClick={this.patchTimeStamp.bind(this)}>
+                <div className='cardfield'>
+                    <h2>CI</h2>
+                </div>
                 <i className="material-icons" id='openordercardicon' >assignment_ind</i>
                 
-                <h2>Customer Interaction</h2>
+                <div className='cardtext'>
+                    <h3>Customer Interaction</h3>
+                    <p>Click here to register a new Customer Interaction</p>
+                </div>
                 
             </div>
         )

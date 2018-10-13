@@ -30,7 +30,7 @@ componentDidMount(){
     
     axios({
         method: 'get',
-        url: '/user/getuserdata/' + userid,
+        url: 'http://localhost:5000/user/getuserdata/' + userid,
         header: {
             'Content-Type' : 'application/json',
             'Authorization': localStorage.getItem('tkey'),
@@ -56,18 +56,22 @@ componentDidMount(){
             
             <div className='row'>
                 <DashBoardUser data={this.state.data}/>
+            </div>    
+
+            <div className='row row2'>
+            
+              
                 <OpenOrderCard/>
                 <CustomerCard/>
-                 
                 <HighPriorityCard />
                 <MessageCard/> 
                 <CreateTimeStampCard/>
                 <StatsCard/>
-            </div>
-
+            </div>  
+                </div>
           
             
-            </div>
+            
         )
     }
 

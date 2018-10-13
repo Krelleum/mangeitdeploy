@@ -30,7 +30,7 @@ componentDidMount(){
         if(this.state.shift !== 'init'){
             axios({
                 method: 'patch',
-                url: 'http://localhost:5000/timestamp/patchtimestamp/' + this.state.shift,
+                url: '/timestamp/patchtimestamp/' + this.state.shift,
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': localStorage.getItem('tkey')

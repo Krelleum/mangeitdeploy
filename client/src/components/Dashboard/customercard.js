@@ -20,7 +20,7 @@ class CustomerCard extends Component {
     componentWillMount() {
         axios({
             method: 'get',
-            url: 'http://localhost:5000/customer/getallcustomer',
+            url: '/customer/getallcustomer',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('tkey')

@@ -59,7 +59,7 @@ a:focus {
   z-index: 98;
   min-width: 50px;
   max-width: 50px;
-  background: grey;
+  background: white;
   color: #fff;
   transition: all 0.3s;
   
@@ -78,7 +78,8 @@ a:focus {
 #sidebar .sidebar-header {
   padding: 20px;
   padding-left: 15px;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 6px;
   background: var(--background);
 }
 
@@ -97,11 +98,12 @@ a:focus {
   font-size: 1.1em;
   display: block;
   transition: all 100ms linear;
+  color: lightgrey;
 }
 
 
 #sidebar ul li a:hover {
-  color: grey;
+  color: white;
   background:var(--background);
   transform: scale(1.05);
   box-shadow: var(--shadow);
@@ -182,30 +184,7 @@ a.article:hover {
 
 @media (max-width: 768px) {
   #sidebar {
-  top: 0px;
-  margin-left: 0px;
-  position: absolute;
-  z-index: 98;
-  min-width: 100%;
-  max-height: 50px;
-  background: grey;
-  color: #fff;
-  transition: all 0.3s;
-  
-
-  }
-
-  .sidebar-header{
-    max-height: 50px;
-    padding-bottom: 5px !important;
-    width: 10%;
-    min-width: 60px;
-    float: left;
-  }
-
-  .sidebar-header h3{
-    margin-top: 0px;
-    margin-left: 5px;
+    margin-left: -250px;
   }
   #sidebar.active {
     margin-left: 0;
@@ -213,26 +192,4 @@ a.article:hover {
   #sidebarCollapse span {
     display: none;
   }
-
-  #sidebar ul li a {
-  padding: 10px;
-  font-size: 1.1em;
-  display: inline-block;
-  transition: all 100ms linear;
-}
-
-#sidebar ul{
-  background: grey;
-  padding: 0px !important;
-
-  
-}
-
-
-  #sidebar li{
-    display: inline;
-  }
-
-
-
 }

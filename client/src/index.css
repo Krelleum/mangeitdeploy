@@ -4,11 +4,16 @@
 --backgroundhover: linear-gradient(45deg, rgb(120, 221, 145) 0%,rgb(92, 194, 167)100%);
 --greybackground:#464646;
 --backgroundgradient: linear-gradient(135deg, rgb(99, 99, 99) 0%,rgb(34, 33, 33) 100%);
-
-
+--secondfont: darkgrey;
+--mainfont: black;
 --darkgreybackground:#3d3d3d;
 --shadowinset: inset 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 --shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+
+
+
+
 
 }
 
@@ -26,7 +31,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   color: white;
-  background-color: transparent !important;
+  
+  background: var(--backgroundhover);
    
 }
 
@@ -34,12 +40,11 @@ html{
 
   /* background-image:url('images/background1.jpg'); */
   
-  background: #464646;
-  background:linear-gradient(135deg, rgb(99, 99, 99) 0%,rgb(34, 33, 33) 100%);
+  background: #f1f1f1;
+  
 
   height: 100%;
-  background-size: fill;
-  background-attachment: fixed;
+  background-size: contain;
 }
 
 input{
@@ -70,7 +75,7 @@ p {
 
 /* video */
 
-/* video#bgvid { 
+video#bgvid { 
     opacity: 0.00;
     position: fixed;
     top: 50%;
@@ -86,4 +91,4 @@ p {
     transform: translateX(-50%) translateY(-50%);
     background: lightgrey;
     background-size: cover; 
-} */
+}

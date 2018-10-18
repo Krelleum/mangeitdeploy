@@ -161,10 +161,10 @@ calculateScore(data){
     var endscore = score - 100
 
     
+        this.setState({
+            score: Math.floor(endscore) + '%'
+        })
        
-            this.setState({
-                score: Math.floor(endscore) + '%'
-            })
    
     
       
@@ -183,6 +183,7 @@ calculateScore(data){
     render() {
         return (
             <div className='col-md-2 statscard dashcard'>
+                <i className="material-icons" id='statscardicon' >trending_up</i>
                 <div className='cardfield'>
                     <h2>{this.state.score}</h2>
                 </div>
@@ -190,7 +191,7 @@ calculateScore(data){
                     <h3>Workload</h3>
                     <p>Displays the predicted workload for your shift.</p>
                 </div>
-                <i className="material-icons" id='statscardicon' >trending_up</i>
+                
                 
             </div>
         )

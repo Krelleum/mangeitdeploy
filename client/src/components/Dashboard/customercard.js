@@ -48,6 +48,7 @@ class CustomerCard extends Component {
     render() {
         return (
             <div className='col-md-2 customercard dashcard' onClick={this.redirectCustomer.bind(this)}>
+                <i className="material-icons" id='openordercardicon' >people</i>
                 <div className='cardfield'>
                     <h2>{this.state.data.length}</h2>
                 </div>
@@ -57,7 +58,7 @@ class CustomerCard extends Component {
                     <h3>Customers</h3>
                     <p>Shows all active Customers in your Database.</p>
                 </div>
-                <i className="material-icons" id='openordercardicon' >people</i>
+                
                 
                 
             </div>

@@ -54,11 +54,11 @@ componentDidMount(){
             <div className='col-md-12 dashboardcontainer'>
             <h1>DASHBOARD</h1>
             
-            <div className='row'>
+            
                 <DashBoardUser data={this.state.data}/>
-            </div>    
+                
 
-            <div className='row row2'>
+            
             
               
                 <OpenOrderCard/>
@@ -67,7 +67,7 @@ componentDidMount(){
                 <MessageCard/> 
                 <CreateTimeStampCard/>
                 <StatsCard/>
-            </div>  
+              
                 </div>
           
             

@@ -1,28 +1,57 @@
 .container{
     background-color: transparent !important;
+    height: 970px;
 }
 
 
 .logincontainerwrapper{
     
     
+    height: 300px;
+    
     margin-top: 200px;
     padding: 0px;
+    
 }
 
-.logincontainerheader{
-    background: var(--backgroundhover);
+
+.logincontainerleft{
+    background:var(--backgroundhover);
+    height: 100%;
+    
 }
+
+.logincontainerright{
+    background:white;
+    height: 100%;
+    padding-right: 50px;
+    
+}
+
+
 
 .logincontainerheader h2{
     margin:0px;
+    margin-top: 50px;
     padding: 10px;
+    padding-bottom: 10px;
+}
+
+.logincontainertext p{
+    margin-left: 10px;
+    line-height: 110%; 
 }
 
 .logincontainersignupbtn{
     margin-top: 0px;
     background: var(--darkgreybackground);
     color: white;
+    display: inline-block;
+    border-radius: 0px 0px 5px 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 20px;
+    
 }
 
 .logincontainersignupbtn p {
@@ -30,8 +59,14 @@
 }
 
 .logincontainerloginbtn{
-    
+    display: inline-block;
     background: var(--backgroundhover);
+    border-radius: 0px 0px 5px 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    
 }
 .logincontainerloginbtn p{
     margin-bottom: 0px;
@@ -45,27 +80,52 @@
 .signupwrapper{
     background: white;
     padding-bottom: 50px;
+    
 }
 
-.loginwrapper{
-    background: var(--darkgreybackground);
-    padding-bottom: 50px;
-}
+
 
 
 .signupform input{
-    color: white;
-    background: none;
-}
-
-.loginform input{
-    color: white;
-    background: none;
-    border-bottom: 1px solid transparent;
+    color: Black;
+     background:#f9f9f9;
+    border-left: 3px solid transparent;
     border-image: var(--backgroundhover);
     border-image-slice: 1;
 }
 
+.loginform input{
+    color: black;
+    background:#f9f9f9;
+    border-left: 3px solid transparent;
+    border-image: var(--backgroundhover);
+    border-image-slice: 1;
+   
+    
+    
+}
+
 #loginbutton{
     border: none;
+    color: white;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 15px;
+    
+    background: var(--backgroundhover);
+}
+
+#signupbutton{
+       border: none;
+    color: white;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    
+    background: var(--backgroundhover);
 }

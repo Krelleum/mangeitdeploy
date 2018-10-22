@@ -107,7 +107,7 @@ class LogIn extends Component {
 
                         <input id='loginuser' placeholder='Username' onChange={this.handleChange.bind(this)} ></input>
                         <input id='loginpassword' placeholder='Password' onChange={this.handleChange.bind(this)}></input>
-                        <input type='submit' id='loginbutton' onClick={this.handleClick.bind(this)}></input>
+                        <input type='submit' id='loginbutton' value='Login' onClick={this.handleClick.bind(this)}></input>
 
                     </div>
                     <div className='loginfeedback'>

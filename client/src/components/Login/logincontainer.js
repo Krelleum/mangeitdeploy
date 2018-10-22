@@ -43,27 +43,51 @@ class LoginContainer extends Component {
     render() {
         return (
             <div className='container logincontainer'>
-                <div className='col-md-4 col-md-offset-3 logincontainerwrapper'>
+                <div className='col-md-6 col-md-offset-2 logincontainerwrapper'>
+                    <div className='col-md-6 logincontainerleft'>
                     
-                    <div className='logincontainerheader'>
-                        <h2>ManageIT</h2>
-                    </div>
-                    
-                    <div className='logincontainerbuttons'>
-                        
-                    <div className='col-md-6 logincontainerloginbtn' onClick={this.handleClickLogIn.bind(this)}>
-                            <p>Login</p>
+                        <div className='logincontainerheader'>
+                            <h2>ManageIT</h2>
                         </div>
 
-                        <div className='col-md-6 logincontainersignupbtn' onClick={this.handleClickSignUp.bind(this)}>
-                            <p>Sign Up</p>
+                        <div className='logincontainertext'>
+                            <p>The ManageIT Software helps you to manage your Teams orders and tasks easily. Just login or sign up! </p>
                         </div>
 
-                    </div>
-                    <div className='loginsignupwrapper'>
-                    {this.toRender()}
+
+
+                       
                     
                     </div>
+
+
+           
+
+
+
+                    <div className='col-md-6 logincontainerright'>
+                    
+                        <div className='logincontainerbuttons'>
+
+                            <div className='logincontainerloginbtn' onClick={this.handleClickLogIn.bind(this)}>
+                                <p>Login</p>
+                            </div>
+
+                            <div className='logincontainersignupbtn' onClick={this.handleClickSignUp.bind(this)}>
+                                <p>Sign Up</p>
+                            </div>
+
+                        </div>
+                        <div className='loginsignupwrapper'>
+                            {this.toRender()}
+
+                        </div>
+                    
+                    
+                    
+                    </div>
+
+                 
                   
 
                 </div>

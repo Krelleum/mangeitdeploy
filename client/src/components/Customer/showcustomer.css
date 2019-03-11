@@ -12,8 +12,9 @@
 .showcustomersmall{
     padding-top: 5px;
     padding-bottom: 5px;
-    background: none;
-    transition: all 200ms; 
+    background: white;
+    transition: all 200ms;
+    color: black; 
     
     border-bottom: 1px solid rgba(255,255,255, 0.2);
     opacity: 0.5;
@@ -40,6 +41,7 @@
 
 .showcustomerinfoleft{
     padding-left: 0px;
+    background: var(--greybackground); 
 }
 
 
